@@ -20,11 +20,15 @@ public class Game {
         this.console = console;
     }
 
-    @AllArgsConstructor
     @Getter
     class Price {
         private double price;
         private Instant priceTimestamp;
+
+        public Price(double price, Instant priceTimestamp) {
+            this.price = price;
+            this.priceTimestamp = priceTimestamp;
+        }
     }
 
 }
