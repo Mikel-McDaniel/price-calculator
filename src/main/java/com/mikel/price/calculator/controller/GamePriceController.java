@@ -33,6 +33,7 @@ public class GamePriceController {
             Iterator<Row> iterator = workbook.getSheetAt(0).iterator();
             iterator.next();
             iterator.remove();
+            workbook.close();
             return Flux.fromIterable(() -> iterator);
         } catch(Exception e) {
             System.out.println("SOMETHING HAPPENED");
